@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/*navigacioni meni*/
+
+header {
+    height: 70px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    float: right;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+nav {
+    display: inline-block;
+    float: right;
+}
+
+.active {
+    color: black;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: dodgerblue;
+}
+
+
+/*logo*/
+
+.logo {
+    display: inline-block;
+    transition: all .3s ease-out;
+}
+
+.logo:hover {
+    cursor: progress;
+    transform: translate(20px, 0);
+}
+
+
+/*Showcase*/
+
+#showcase {
+    height: 100vh;
+    background: url(../img/first-background.jpg) no-repeat;
+    background-size: cover;
+    position: center;
+}
+
+.button {
+    height: 35px;
+    background-color: #e8491d;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#showcase {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.fred {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+.fred h1 {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+/* @keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+} 
+.fred h1 {
+    font-size: 70px;
+    
+    animation: blinker 4s linear;
+    animation-iteration-count: 4;
+}
+*/
+/*Boxes*/
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes h2 {
+    text-align: center;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+#boxes .box {
+    float: left;
+    width: 31%;
+    padding: 10px;
+    text-align: center;
+}
+
+#boxes .box img {
+    width: 130px;
+}
+
+#boxes .box img:hover {
+    cursor: progress;
+    transform: rotate(20deg);
+}
+
+
+/*Main*/
+
+#main {
+    height: 150vh;
+    position: relative;
+    clear: left;
+    background: url(../img/buy-now-bg.jpg) no-repeat;
+    background-size: cover;
+    position: center;
+}
+
+.buynow h3 {
+    color: #e8491d;
+}
+
+.buynow {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+
+/*footer*/
+
+.footer {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 20%;
+}
+
+@media screen and (max-width:768px) {
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    .container {
+        width: 30%;
+    }
+
+    #boxes .box {
+        width: 100%;
+        float: none;
+    }
+
+    ul {
+        transform: rotate(180deg);
+    }
+
+    ul>li {
+        transform: rotate(-180deg);
+    }
+
+    header .container .logo {
+        float: left;
+    }
+
+    header li {
+        line-height: 1px;
+        float: none;
+        display: block;
+    }
+
+    header {
+        height: 200px;
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width:720px) {
+    header .container .logo {
+
+        float: left;
+    }
+
+    header nav {
+        float: right;
+    }
+
+    .container {
+        width: 80%;
+    }
+    
+}
